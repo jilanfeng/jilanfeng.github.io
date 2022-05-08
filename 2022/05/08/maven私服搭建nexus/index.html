@@ -6,15 +6,15 @@
   
   <title>maven私服搭建nexus | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="nexus3安装1.安装镜像1docker pull sonatype&#x2F;nexu3:3.3.0 2.新建目录1mkdir -p &#x2F;home&#x2F;apps&#x2F;nexcus&#x2F;data 3.创建启动123456789docker run \-d \--name nexus \--restart&#x3D;always \--privileged&#x3D;true \-p 6006:8081 \-v &#x2F;home&#x2F;apps&#x2F;nex">
+  <meta name="description" content="nexus3安装1.安装镜像1docker pull sonatype&#x2F;nexu3:3.32.0 2.新建目录1mkdir -p &#x2F;home&#x2F;apps&#x2F;nexcus&#x2F;data 3.创建启动123456789docker run \-d \--name nexus \--restart&#x3D;always \--privileged&#x3D;true \-p 6006:8081 \-v &#x2F;home&#x2F;apps&#x2F;ne">
 <meta property="og:type" content="article">
 <meta property="og:title" content="maven私服搭建nexus">
 <meta property="og:url" content="http://example.com/2022/05/08/maven%E7%A7%81%E6%9C%8D%E6%90%AD%E5%BB%BAnexus/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="nexus3安装1.安装镜像1docker pull sonatype&#x2F;nexu3:3.3.0 2.新建目录1mkdir -p &#x2F;home&#x2F;apps&#x2F;nexcus&#x2F;data 3.创建启动123456789docker run \-d \--name nexus \--restart&#x3D;always \--privileged&#x3D;true \-p 6006:8081 \-v &#x2F;home&#x2F;apps&#x2F;nex">
+<meta property="og:description" content="nexus3安装1.安装镜像1docker pull sonatype&#x2F;nexu3:3.32.0 2.新建目录1mkdir -p &#x2F;home&#x2F;apps&#x2F;nexcus&#x2F;data 3.创建启动123456789docker run \-d \--name nexus \--restart&#x3D;always \--privileged&#x3D;true \-p 6006:8081 \-v &#x2F;home&#x2F;apps&#x2F;ne">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-05-08T08:26:47.000Z">
-<meta property="article:modified_time" content="2022-05-08T08:47:06.823Z">
+<meta property="article:modified_time" content="2022-05-08T09:00:11.897Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -95,7 +95,7 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h2 id="nexus3安装"><a href="#nexus3安装" class="headerlink" title="nexus3安装"></a>nexus3安装</h2><h3 id="1-安装镜像"><a href="#1-安装镜像" class="headerlink" title="1.安装镜像"></a>1.安装镜像</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull sonatype/nexu3:3.3.0</span><br></pre></td></tr></table></figure>
+        <h2 id="nexus3安装"><a href="#nexus3安装" class="headerlink" title="nexus3安装"></a>nexus3安装</h2><h3 id="1-安装镜像"><a href="#1-安装镜像" class="headerlink" title="1.安装镜像"></a>1.安装镜像</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull sonatype/nexu3:3.32.0</span><br></pre></td></tr></table></figure>
 <h3 id="2-新建目录"><a href="#2-新建目录" class="headerlink" title="2.新建目录"></a>2.新建目录</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> -p /home/apps/nexcus/data</span><br></pre></td></tr></table></figure>
 <h3 id="3-创建启动"><a href="#3-创建启动" class="headerlink" title="3.创建启动"></a>3.创建启动</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">docker run \</span><br><span class="line">-d \</span><br><span class="line">--name nexus \</span><br><span class="line">--restart=always \</span><br><span class="line">--privileged=<span class="literal">true</span> \</span><br><span class="line">-p 6006:8081 \</span><br><span class="line">-v /home/apps/nexus/data:/var/nexus-data \</span><br><span class="line">sonatype/nexus3:3.32.0</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <h3 id="4-查看日志"><a href="#4-查看日志" class="headerlink" title="4.查看日志"></a>4.查看日志</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker logs nexus</span><br></pre></td></tr></table></figure>
